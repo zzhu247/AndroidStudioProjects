@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,19 +15,31 @@ public class MainActivity extends AppCompatActivity {
     private EditText eName;
     private EditText ePassword;
     private Button eLogin;
+    private TextView eRegister;
 
-    private String defaultUserName = "Admin";
-    private String defaultPassword = "12345678";
     private boolean isValid = false;
+
+    //Credentials credentials = new Credentials("Admin", "12345678");
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        eName = findViewById(R.id.eName);
-        ePassword = findViewById(R.id.editTextTextPassword);
-        eLogin = findViewById(R.id.buttonLogin);
+        eName = findViewById(R.id.loginName);
+        ePassword = findViewById(R.id.loginPassword);
+        eLogin = findViewById(R.id.loginBtn);
+        eRegister = findViewById(R.id.registerLink);
+
+        eRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // go to regisratin page
+                startActivity(new Intent(MainActivity.this, RegisrationActivity.class));
+            }
+        });
 
         eLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,9 +69,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean ValidateLogin(String name, String password){
-        if (name.equals(defaultUserName) && password.equals(defaultPassword)){
-            return true;
+
+        if (RegisrationActivity.credentials != null) {
+            if (name.equals(RegisrationActivity.credentials.getDefaultUserName()) && password.equals(RegisrationActivity.credentials.getDefaultPassword())){
+                return true;
+            }
         }
         return false;
+
     }
 }
