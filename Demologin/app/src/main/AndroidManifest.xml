@@ -9,15 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DemoLogin">
-        <activity android:name=".RegisrationActivity"></activity>
+        <activity
+            android:name=".AddToWishlist"
+            android:exported="true"
+            ></activity>
+        <activity
+            android:name=".Wishlist"
+            android:label="@string/title_activity_wishlist"
+            android:exported="true"
+            android:theme="@style/Theme.DemoLogin.NoActionBar" />
+        <activity android:name=".RegisrationActivity" />
         <activity android:name=".HomePageActivity" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
