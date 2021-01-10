@@ -8,53 +8,34 @@
 
     <TextView
         android:id="@+id/WishListTitle"
-        android:layout_width="412dp"
+        android:layout_width="411dp"
         android:layout_height="88dp"
-        android:background="#FFAFAF"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:lineSpacingExtra="8sp"
+        android:paddingLeft="40sp"
+        android:paddingTop="20sp"
         android:text="WishList"
-        app:layout_constraintBottom_toTopOf="@+id/savedBalance"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:typeface="normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/savedBalance"
-        android:layout_width="412dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="1dp"
-        android:background="#FFA8A8"
-        android:gravity="center"
-        android:text="Saved Balance"
-        app:layout_constraintBottom_toTopOf="@+id/balance"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/WishListTitle" />
-
-    <TextView
-        android:id="@+id/balance"
-        android:layout_width="410dp"
-        android:layout_height="66dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="352dp"
-        android:background="#FFBBBB"
-        android:gravity="center"
-        android:text="$ 100.00"
-        app:layout_constraintBottom_toTopOf="@+id/addItem"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/savedBalance" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="413dp"
-        android:layout_height="541dp"
-        android:layout_marginBottom="3dp"
+        android:layout_width="408dp"
+        android:layout_height="638dp"
+        android:layout_marginBottom="4dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/balance"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addItem"
@@ -63,10 +44,26 @@
         android:layout_marginStart="339dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="136dp"
+        android:backgroundTint="#8EC973"
         android:clickable="true"
+        app:backgroundTint="#BE8EC973"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_input_add" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Balance: 100.00"
+        android:textColor="#000000"
+        app:chipBackgroundColor="#EFB9B9"
+        app:chipStrokeColor="#BA5656"
+        app:layout_constraintEnd_toEndOf="@+id/WishListTitle"
+        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintStart_toStartOf="@+id/WishListTitle"
+        app:layout_constraintTop_toTopOf="@+id/WishListTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

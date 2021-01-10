@@ -26,6 +26,7 @@ public class Wishlist extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerAdapter recyclerAdapter;
 
+//    List<Item> itemsList = new ArrayList<>();
     List<String> itemsList;
 
     private FloatingActionButton eAddItem;
@@ -35,9 +36,13 @@ public class Wishlist extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wishlist);
 
+//        List<Item> itemsList = new ArrayList<Item>();
         itemsList = new ArrayList<>();
 
-        // Display List
+        // Display default item list
+//        itemsList.add(new Item("Item 1", "Brand", "$10", "$10", 123)); // fix the url
+//        itemsList.add(new Item("Item 2", "Brand", "$10", "$10", 123));
+//        itemsList.add(new Item("Item 3", "Brand", "$10", "$10", 123));
         itemsList.add("Item 1");
         itemsList.add("Item 2");
         itemsList.add("Item 3");
