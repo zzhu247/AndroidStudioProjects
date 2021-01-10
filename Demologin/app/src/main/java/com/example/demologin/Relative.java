@@ -1,7 +1,6 @@
 package com.example.demologin;
 
 import android.os.Bundle;
-import android.support.wearable.activity.WearableActivity;
 import android.view.WindowManager;
 import android.widget.TextView;
 
@@ -35,7 +34,7 @@ public class Relative extends AppCompatActivity {
                 Fragment fragment = null;
                 switch (i) {
                     case R.id.navigation_transaction:
-                        fragment = new ();
+                        fragment = new tab1();
                         break;
 
                     case R.id.navigation_wishlist:
@@ -48,5 +47,6 @@ public class Relative extends AppCompatActivity {
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
             }
+        });
     }
 }
