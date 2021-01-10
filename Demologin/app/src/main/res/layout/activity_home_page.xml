@@ -7,6 +7,22 @@
     tools:context=".HomePageActivity">
 
     <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/balance_bg"
+        android:fontFamily="@font/quicksand_medium"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:text="BALANCE: $100.50"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="32dp" />
+
+    <TextView
         android:id="@+id/abbyli3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
