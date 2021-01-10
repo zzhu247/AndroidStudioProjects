@@ -7,15 +7,15 @@
 
     <ImageView
         android:id="@+id/itemImage"
-        android:layout_width="111dp"
-        android:layout_height="95dp"
+        android:layout_width="142dp"
+        android:layout_height="120dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@drawable/vans" />
 
     <TextView
         android:id="@+id/itemName"
@@ -24,7 +24,7 @@
         android:layout_marginStart="18dp"
         android:layout_marginEnd="176dp"
         android:layout_marginBottom="33dp"
-        android:text="TextView"
+        android:text="Item Name"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,27 +35,27 @@
 
     <TextView
         android:id="@+id/itemBrand"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
+        android:layout_width="66dp"
+        android:layout_height="17dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="208dp"
-        android:text="TextView"
+        android:layout_marginEnd="168dp"
+        android:text="Brand"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        app:layout_constraintBottom_toTopOf="@+id/itemName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/itemImage"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="246dp"
+        android:layout_width="215dp"
         android:layout_height="24dp"
         android:layout_marginStart="18dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="6dp"
+        android:progress="100"
+        android:progressBackgroundTint="#79291010"
+        android:progressTint="#43A047"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/itemImage"
@@ -65,36 +65,33 @@
         android:id="@+id/totalCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="240dp"
         android:layout_marginTop="77dp"
         android:layout_marginEnd="20dp"
         android:text="$$$"
         app:layout_constraintBottom_toTopOf="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/itemImage"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/costSaved"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="214dp"
+        android:layout_width="40dp"
+        android:layout_height="17dp"
         android:text="$"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar"
-        app:layout_constraintEnd_toStartOf="@+id/totalCost"
- />
+        tools:layout_editor_absoluteX="178dp"
+        tools:layout_editor_absoluteY="87dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/purchaseDecisionBtn"
-        android:layout_width="30dp"
-        android:layout_height="26dp"
+        android:layout_width="29dp"
+        android:layout_height="27dp"
+        android:backgroundTint="#CE43A047"
         android:clickable="true"
         app:backgroundTint="#8EC973"
         app:fabSize="auto"
-        app:srcCompat="@android:drawable/btn_star"
-        tools:layout_editor_absoluteX="26dp"
+        app:rippleColor="#00573030"
+        app:srcCompat="@android:drawable/editbox_background"
+        app:useCompatPadding="false"
+        tools:layout_editor_absoluteX="32dp"
         tools:layout_editor_absoluteY="26dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
